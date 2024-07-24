@@ -1,0 +1,41 @@
+.Heading {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-template-rows: min-content;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+.Details {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+  "."
+  "userDetails"
+  "discussionDetails";
+}
+.UserDetails {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: min-content;
+  align-items: center;
+  column-gap: 0.5rem;
+  grid-area: userDetails;
+}
+
+.DiscussionDetails {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: min-content;
+  column-gap: 0.5rem;
+  grid-area: discussionDetails;
+}
+
+.Dot {
+  height: 0.25rem;
+  width: 0.25rem;
+  border-radius: 50%;
+  background-color: #D1D1D1;
+  display: inline-block;
+  place-self: center;
+}

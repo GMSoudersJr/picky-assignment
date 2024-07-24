@@ -1,0 +1,11 @@
+.Carousel {
+  max-width: 600px;
+  display: flex;
+  gap: 0.5rem;
+  grid-area: carousel;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

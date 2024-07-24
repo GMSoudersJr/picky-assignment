@@ -18,6 +18,9 @@
       }
     ],
     "paths": {
+      "@/types": ["./src/app/lib/definitions.ts"],
+      "@/components/*": ["./src/app/components/*"],
+      "@/images/*": ["./public/images/*"],
       "@/*": ["./src/*"]
     }
   },

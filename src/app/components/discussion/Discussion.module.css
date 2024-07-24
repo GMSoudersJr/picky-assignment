@@ -1,0 +1,19 @@
+.Discussion {
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: calc(3.75rem + 0.5rem) 1fr;
+  grid-template-rows: repeat(5, min-content);
+  grid-template-areas:
+  "heading heading"
+  ". title"
+  ". content"
+  ". carousel"
+  ". counts";
+  row-gap: 0.8rem;
+}
+
+.Counts {
+  display: flex;
+  justify-content: space-between;
+  grid-area: counts;
+}
