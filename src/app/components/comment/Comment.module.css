@@ -1,0 +1,23 @@
+.comment {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: calc(3.75rem + 0.5rem) 1fr;
+  grid-template-rows: repeat(5, min-content);
+  grid-template-areas:
+  "heading heading"
+  ". content"
+  ". carousel"
+  ". counts"
+  ". reply";
+  row-gap: 0.8rem;
+}
+
+.reply {
+  grid-area: reply;
+}
+
+.Counts {
+  display: flex;
+  justify-content: space-between;
+  grid-area: counts;
+}

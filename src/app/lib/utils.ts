@@ -1,7 +1,7 @@
 import type { TDiscussion, TComment } from '@/types';
 
-export async function getDiscussion(id: string): Promise<TDiscussion | undefined> {
-  let result: TDiscussion;
+export async function getDiscussion(id: string): Promise<TDiscussion[] | undefined> {
+  let result: TDiscussion[] = [];
   try {
     const res = await fetch(`http://localhost:3000/api/discussion/search?id=${id}`)
     if (!res.ok) return result;
@@ -32,7 +32,7 @@ export async function getComments(): Promise<TComment[] | undefined> {
 export async function getDiscussions(): Promise<TDiscussion[] | undefined> {
   let result: TDiscussion[] = [];
   try {
-    const res = await fetch("http://localhost:3000/api/discussions");
+    const res = await fetch("http://localhost:3000/api/discussions", { cache: 'no-store' });
     if (!res.ok) return result;
 
     result = await res.json();

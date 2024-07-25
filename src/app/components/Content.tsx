@@ -3,16 +3,22 @@ import styles from './Content.module.css';
 
 interface ContentProps {
   content: string;
-  id: number;
+  id?: number;
 }
 
 const Content = ({content, id}: ContentProps) => {
 
-  return (
-    <Link href={`/discussion/${id}`} className={styles.content}>
-      <p>{content}</p>
-    </Link>
-  )
+  if (id) {
+    return (
+      <Link href={`/discussion/${id}`} className={styles.content}>
+        <p>{content}</p>
+      </Link>
+    )
+  } else {
+    return (
+      <p className={styles.content}>{content}</p>
+    )
+  }
 }
 
 export default Content;

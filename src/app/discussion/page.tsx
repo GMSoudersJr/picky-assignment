@@ -15,21 +15,27 @@ export default async function DiscussionPage() {
   return (
     <main className={styles.main}>
       {discussions && discussions.map((discussion) => {
-        return (
-          <Discussion
-            key={discussion!.id}
-            category={discussion!.category}
-            createdAt={discussion!.createdAt}
-            user={discussion!.user}
-            commentCount={discussion!.commentCount}
-            upvoteCount={discussion!.upvoteCount}
-            viewCount={discussion!.viewCount}
-            title={discussion!.title}
-            id={discussion!.id}
-            image_urls={discussion!.image_urls}
-            content={discussion!.content}
-          />
-        )
+        if (discussion) {
+          return (
+            <Discussion
+              key={discussion.id}
+              category={discussion.category}
+              createdAt={discussion.createdAt}
+              user={discussion.user}
+              commentCount={discussion.commentCount}
+              upvoteCount={discussion.upvoteCount}
+              viewCount={discussion.viewCount}
+              title={discussion.title}
+              id={discussion.id}
+              image_urls={discussion.image_urls}
+              content={discussion.content}
+            />
+          )
+        } else {
+          return(
+            <h1>No Discussions</h1>
+          )
+        }
       })}
     </main>
   );

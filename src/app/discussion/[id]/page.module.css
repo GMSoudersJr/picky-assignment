@@ -5,8 +5,12 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  gap: 1rem;
 }
 
+.commentSection {
+  margin-left: calc(3.75rem + 0.5rem);
+}
 .description {
   display: inherit;
   justify-content: inherit;

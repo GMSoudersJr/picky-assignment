@@ -3,16 +3,22 @@ import styles from './Title.module.css';
 
 interface DiscussionTitleProps {
   title: string
-  id: number
+  id?: number
 }
 
 const DiscussionTitle = ({title, id}: DiscussionTitleProps) => {
 
-  return (
-    <Link href={`/discussion/${id}`} className={styles.title}>
-      <h2>{title}</h2>
-    </Link>
-  )
+  if (id) {
+    return (
+      <Link href={`/discussion/${id}`} className={styles.title}>
+        <h2>{title}</h2>
+      </Link>
+    )
+  } else {
+    return (
+      <h2 className={styles.title}>{title}</h2>
+    )
+  }
 }
 
 export default DiscussionTitle;
