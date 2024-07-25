@@ -1,28 +1,36 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
-import discussion from '../lib/data/discussion.json';
 import Discussion from "@/app/components/discussion/Discussion";
+import { getDiscussions } from "../lib/utils";
 
 export const metadata: Metadata = {
-  title: "Discussion",
-  description: "A discussion about something",
+  title: "Discussion | Picky Assignment",
+  description: "A discussion board for all things K-Beauty",
 };
 
-export default function DiscussionPage() {
+export default async function DiscussionPage() {
+
+  const discussions = await getDiscussions();
+
   return (
     <main className={styles.main}>
-      <Discussion
-        category={discussion.category}
-        createdAt={discussion.createdAt}
-        user={discussion.user}
-        commentCount={discussion.commentCount}
-        upvoteCount={discussion.upvoteCount}
-        viewCount={discussion.viewCount}
-        title={discussion.title}
-        id={discussion.id}
-        image_urls={discussion.image_urls}
-        content={discussion.content}
-      />
+      {discussions && discussions.map((discussion) => {
+        return (
+          <Discussion
+            key={discussion!.id}
+            category={discussion!.category}
+            createdAt={discussion!.createdAt}
+            user={discussion!.user}
+            commentCount={discussion!.commentCount}
+            upvoteCount={discussion!.upvoteCount}
+            viewCount={discussion!.viewCount}
+            title={discussion!.title}
+            id={discussion!.id}
+            image_urls={discussion!.image_urls}
+            content={discussion!.content}
+          />
+        )
+      })}
     </main>
   );
 }

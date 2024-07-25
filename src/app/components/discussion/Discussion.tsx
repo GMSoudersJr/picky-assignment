@@ -1,4 +1,4 @@
-import type { Discussion } from '@/types'
+import type { TDiscussion } from '@/types'
 import DiscussionHeading from './Heading';
 import UpvoteCount from '@/components/UpvoteCount';
 import CommentCount from '@/components/CommentCount';
@@ -7,7 +7,7 @@ import Content from '@/components/Content';
 import Carousel from '@/components/Carousel';
 import styles from './Discussion.module.css';
 
-const Discussion = (discussion: Discussion) => {
+const Discussion = (discussion: TDiscussion) => {
 
   return (
     <section className={styles.Discussion}>
@@ -21,8 +21,8 @@ const Discussion = (discussion: Discussion) => {
         createdAt={discussion.createdAt}
         viewCount={discussion.viewCount}
       />
-      <DiscussionTitle title={discussion.title} />
-      <Content content={discussion.content} />
+      <DiscussionTitle title={discussion.title} id={discussion.id}/>
+      <Content content={discussion.content} id={discussion.id}/>
       <Carousel image_urls={discussion.image_urls}/>
       <div className={styles.Counts}>
         <UpvoteCount upvoteCount={discussion.upvoteCount} />

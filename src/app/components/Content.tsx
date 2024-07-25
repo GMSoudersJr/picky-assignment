@@ -1,15 +1,17 @@
+import Link from 'next/link';
 import styles from './Content.module.css';
 
 interface ContentProps {
-  content: string
+  content: string;
+  id: number;
 }
 
-const Content = ({content}: ContentProps) => {
+const Content = ({content, id}: ContentProps) => {
 
   return (
-    <p className={styles.Content}>
-      {content}
-    </p>
+    <Link href={`/discussion/${id}`} className={styles.content}>
+      <p>{content}</p>
+    </Link>
   )
 }
 
