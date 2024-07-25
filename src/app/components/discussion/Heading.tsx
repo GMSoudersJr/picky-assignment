@@ -4,6 +4,7 @@ import UserSkinType from "@/components/UserSkinType";
 import Username from "@/components/Username";
 import ViewCount from "@/components/ViewCount";
 import styles from "./Heading.module.css";
+import Link from "next/link";
 
 interface DiscussionHeadingProps {
   title: string;
@@ -16,10 +17,17 @@ interface DiscussionHeadingProps {
   viewCount: number;
 }
 
+const basePickyLink = "https://www.gopicky.com/";
+
 const DiscussionHeading = ({title, user, createdAt, viewCount}: DiscussionHeadingProps) => {
 
   return (
-    <section className={styles.Heading}>
+    <Link
+      href={`${basePickyLink}${user.nick_name}`}
+      referrerPolicy="no-referrer"
+      target="_blank"
+    >
+    <div className={styles.Heading}>
       <ProfileImg profileImg={{
         src:user.image_url,
         alt:user.nick_name,
@@ -38,7 +46,8 @@ const DiscussionHeading = ({title, user, createdAt, viewCount}: DiscussionHeadin
         </div>
       </div>
 
-    </section>
+    </div>
+    </Link>
   )
 }
 
