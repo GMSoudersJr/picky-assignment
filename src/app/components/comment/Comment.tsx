@@ -27,7 +27,7 @@ const Comment = (comment: TComment) => {
           <UpvoteCount upvoteCount={comment.upvoteCount} />
           <CommentCount commentCount={comment.commentCount} />
         </div>
-        {comment.replies.length > 0 && (<h1 className={styles.reply}>there's a reply</h1>)}
+        {comment.replies.length > 0 && (<h1 className={styles.reply}>there is a reply</h1>)}
       </section>
     )
   } else {

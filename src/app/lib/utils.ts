@@ -32,7 +32,7 @@ export async function getComments(): Promise<TComment[] | undefined> {
 export async function getDiscussions(): Promise<TDiscussion[] | undefined> {
   let result: TDiscussion[] = [];
   try {
-    const res = await fetch("http://localhost:3000/api/discussions", { cache: 'no-store' });
+    const res = await fetch("http://localhost:3000/api/discussions");
     if (!res.ok) return result;
 
     result = await res.json();

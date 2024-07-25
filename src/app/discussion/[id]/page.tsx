@@ -37,7 +37,7 @@ export default async function FullDiscussionPage({ params }: { params: { id: str
               )
             } else {
               return(
-                <h1>No Discussion</h1>
+                <h1 key={'no-discussion'}>No Discussion</h1>
               )
             }
           })}
@@ -63,7 +63,7 @@ export default async function FullDiscussionPage({ params }: { params: { id: str
               )
             } else {
               return (
-                <h2>No comments!</h2>
+                <h2 key={'no-comments'}>No comments!</h2>
               )
             }
           })}

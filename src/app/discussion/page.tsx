@@ -33,7 +33,7 @@ export default async function DiscussionPage() {
           )
         } else {
           return(
-            <h1>No Discussions</h1>
+            <h1 key={'no-discussions'}>No Discussions</h1>
           )
         }
       })}
