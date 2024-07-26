@@ -37,3 +37,18 @@
   place-self: center;
   filter: brightness(50%);
 }
+
+@media (max-width: 700px) {
+  .discussion {
+    grid-template-areas:
+    "category category"
+    "heading heading"
+    "title title"
+    "content content"
+    "viewsSince viewsSince"
+    "carousel carousel"
+    "counts counts";
+  }
+
+}
+

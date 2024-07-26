@@ -5,6 +5,8 @@ import Content from "@/components/Content";
 import Carousel from "@/components/Carousel";
 import UpvoteCount from "@/components/UpvoteCount";
 import CommentCount from "@/components/CommentCount";
+import DateCreated from "@/components/DateCreated";
+import ViewCount from "@/components/ViewCount";
 
 const Reply = (reply: TReply) => {
 
@@ -18,10 +20,13 @@ const Reply = (reply: TReply) => {
             nick_name: reply.user.nick_name,
             skin_type: reply.user.skin_type
           }}
-          createdAt={reply.createdAt}
-          viewCount={reply.viewCount}
         />
         <Content content={reply.content}/>
+        <div className={styles.viewsSince}>
+          <DateCreated createdAt={reply.createdAt} />
+          <div className={styles.dot}></div>
+          <ViewCount views={reply.viewCount} />
+        </div>
         <Carousel image_urls={reply.image_urls} />
         <div className={styles.counts}>
           <UpvoteCount upvoteCount={reply.upvoteCount} />

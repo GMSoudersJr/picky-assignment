@@ -6,6 +6,7 @@
   grid-template-areas:
   "heading heading"
   ". content"
+  ". viewsSince"
   ". carousel"
   ". counts";
   row-gap: 0.8rem;
@@ -21,3 +22,35 @@
   grid-area: counts;
   align-items: center;
 }
+
+.viewsSince {
+  display: flex;
+  gap: 0.5rem;
+  grid-area: viewsSince;
+  align-items: center;
+}
+
+.dot {
+  height: 0.25rem;
+  width: 0.25rem;
+  border-radius: 50%;
+  background-color: #D1D1D1;
+  display: inline-block;
+  place-self: center;
+  filter: brightness(50%);
+}
+
+@media (max-width: 700px) {
+  .reply {
+    grid-template-areas:
+    "heading heading"
+    "content content"
+    "viewsSince viewsSince"
+    "carousel carousel"
+    "counts counts";
+    border-left: 0.03rem solid rgba(210, 215, 211, 0.4);
+    padding-left: 0.8rem;
+  }
+}
+
+

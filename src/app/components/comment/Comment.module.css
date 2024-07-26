@@ -54,3 +54,17 @@
   place-self: center;
   filter: brightness(50%);
 }
+
+@media (max-width: 700px) {
+  .comment {
+    grid-template-areas:
+    "heading heading"
+    "content content"
+    "viewsSince viewsSince"
+    "carousel carousel"
+    "counts counts"
+    "reply reply"
+    "hr hr";
+  }
+}
+
