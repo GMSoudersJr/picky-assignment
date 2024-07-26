@@ -1,0 +1,8 @@
+.category {
+  padding: 0.8rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  background-color: rgb(var(--picky-pink-light-rgb));
+  grid-area: category;
+  place-self: start;
+}

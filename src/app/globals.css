@@ -38,6 +38,9 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+  --picky-pink: #e46583;
+  --picky-pink-dark-rgb: 228, 101, 131;
+  --picky-pink-light-rgb: 232, 162, 188;
 }
 
 @media (prefers-color-scheme: dark) {

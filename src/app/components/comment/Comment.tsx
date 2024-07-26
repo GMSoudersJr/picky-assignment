@@ -1,6 +1,6 @@
 import type { TComment } from "@/types";
 import styles from './Comment.module.css';
-import Heading from "@/components/comment/Heading";
+import Heading from "@/components/Heading";
 import Content from "@/components/Content";
 import Carousel from "@/components/Carousel";
 import UpvoteCount from "@/components/UpvoteCount";
