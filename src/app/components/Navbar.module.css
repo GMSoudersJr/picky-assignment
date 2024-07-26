@@ -22,8 +22,35 @@
 }
 @media (max-width: 700px) {
   .navbar {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, min-content);
     gap: 1rem;
+    grid-template-areas:
+    "picky products curation search"
+    "discussion pickyForCreators joinPicky search";
+  }
+
+  .picky {
+    grid-area: picky;
+  }
+  .products {
+    grid-area: products;
+  }
+  .curation {
+    grid-area: curation;
+  }
+  .discussion {
+    grid-area: discussion;
+  }
+  .pickyForCreators {
+    grid-area: pickyForCreators;
+  }
+  .joinPicky {
+    grid-area: joinPicky;
+  }
+  .search {
+    grid-area: search;
   }
 }
 

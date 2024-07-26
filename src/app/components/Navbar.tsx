@@ -10,7 +10,11 @@ const Navbar = () => {
       {PAGES.map((page) => {
         if (page.path.startsWith('/')) {
           return(
-            <Link key={page.path} href={page.path}>
+            <Link
+              key={page.path}
+              href={page.path}
+              className={styles[`${page.class}`]}
+            >
               {page.label}
             </Link>
           )
@@ -21,6 +25,7 @@ const Navbar = () => {
               href={page.path}
               referrerPolicy="no-referrer"
               target="_blank"
+              className={styles[`${page.class}`]}
             >
               {page.label}
             </Link>
@@ -46,26 +51,32 @@ const PAGES = [
   {
     path: "/",
     label: "Picky",
+    class: 'picky'
   },
   {
     path: "/products",
     label: "products",
+    class: 'products'
   },
   {
     path: "/curation",
     label: "curation",
+    class: 'curation'
   },
   {
     path: "/discussion",
     label: "discussion",
+    class: 'discussion'
   },
   {
     path: "https://creatorsapp.gopicky.com/sign-up",
     label: "picky for creators",
+    class: 'pickyForCreators'
   },
   {
     path: "https://picky.notion.site/Picky-Plus-Creators-Program-Overview-Membership-Benefits-Rules-932af58f7d4841baba8c4eb6b564334c",
     label: "join picky➕",
+    class: 'joinPicky'
   },
 ];
 
