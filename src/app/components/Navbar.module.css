@@ -5,6 +5,7 @@
   justify-content: center;
   padding: 1rem;
   position: relative;
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
 }
 
 .searchButton {
@@ -20,15 +21,18 @@
   background-color: rgb(var(--picky-pink-light-rgb));
   transition: ease-in-out .5s;
 }
-@media (max-width: 700px) {
+
+@media (max-width: 830px) {
   .navbar {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr) 15%;
     grid-template-rows: repeat(2, min-content);
     gap: 1rem;
     grid-template-areas:
     "picky products curation search"
     "discussion pickyForCreators joinPicky search";
+    justify-items: center;
+    align-items: center;
   }
 
   .picky {
@@ -52,6 +56,19 @@
   .search {
     grid-area: search;
   }
+}
+
+@media (max-width: 500px) {
+  .navbar{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+    "picky picky picky products products products"
+    "curation curation search search discussion discussion"
+    "pickyForCreators pickyForCreators pickyForCreators joinPicky joinPicky joinPicky";
+  }
+
 }
 
 /* Tablet and Smaller Desktop */
