@@ -9,7 +9,7 @@ interface CommentCountProps {
 const CommentCount = ({commentCount}: CommentCountProps) => {
 
   return (
-    <section className={styles.commentCount}>
+    <div className={styles.commentCount}>
       <Image
         className={styles.commentIcon}
         src={commentIcon}
@@ -18,7 +18,7 @@ const CommentCount = ({commentCount}: CommentCountProps) => {
         width={16}
       />
       <p>{commentCount}</p>
-    </section>
+    </div>
   )
 }
 

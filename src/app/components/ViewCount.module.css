@@ -1,0 +1,9 @@
+.viewCount {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: min-content;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+

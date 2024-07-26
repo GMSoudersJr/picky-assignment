@@ -15,6 +15,7 @@
 
 .counts {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   grid-area: counts;
+  align-items: center;
 }

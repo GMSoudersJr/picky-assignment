@@ -1,3 +1,5 @@
+import styles from './ViewCount.module.css';
+
 interface ViewProps {
   views: number
 }
@@ -5,7 +7,7 @@ interface ViewProps {
 const ViewCount = ({views}: ViewProps) => {
 
   return (
-    <p>👀 {views}</p>
+    <p className={styles.viewCount}>{views} Views</p>
   )
 }
 
