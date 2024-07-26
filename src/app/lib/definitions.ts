@@ -23,7 +23,7 @@ export type TDiscussion = {
   createdAt: string;
 } | undefined;
 
-export type Reply = {
+export type TReply = {
   id: number;
   content: string;
   image_urls: string[] | [];
@@ -45,5 +45,5 @@ export type TComment = {
   category: Category;
   user: User;
   createdAt: string;
-  replies: Reply[] | [];
+  replies: TReply[] | [];
 } | undefined;

@@ -6,7 +6,7 @@ import searchIcon from '@/images/search@3x.png'
 const Navbar = () => {
 
   return (
-    <div className={styles.Navbar}>
+    <div className={styles.navbar}>
       {PAGES.map((page) => {
         if (page.path.startsWith('/')) {
           return(
@@ -27,10 +27,10 @@ const Navbar = () => {
           )
         }
       })}
-      <div className={styles.Search}>
-        <button type="submit" className={styles.SearchButton}>
+      <div className={styles.search}>
+        <button type="submit" className={styles.searchButton}>
           <Image
-            className={styles.SearchIcon}
+            className={styles.searchIcon}
             src={searchIcon}
             alt="search icon"
             height={16}

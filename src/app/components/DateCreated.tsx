@@ -1,3 +1,5 @@
+import styles from './DateCreated.module.css';
+
 interface DateCreatedProps {
   createdAt: string
 }
@@ -12,7 +14,7 @@ const DateCreated = ({createdAt}: DateCreatedProps) => {
   })
 
   return (
-    <p>{date}</p>
+    <p className={styles.createdAt}>{date}</p>
   )
 }
 

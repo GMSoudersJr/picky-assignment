@@ -7,7 +7,7 @@ interface UserSkinTypeProps {
 const UserSkinType = ({userSkinType}: UserSkinTypeProps) => {
 
   return (
-    <p className={styles.UserSkinType}>{userSkinType}</p>
+    <p className={styles.userSkinType}>{userSkinType}</p>
   )
 }
 

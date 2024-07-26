@@ -5,6 +5,7 @@ import Content from "@/components/Content";
 import Carousel from "@/components/Carousel";
 import UpvoteCount from "@/components/UpvoteCount";
 import CommentCount from "@/components/CommentCount";
+import Reply from "@/components/reply/Reply";
 
 const Comment = (comment: TComment) => {
 
@@ -23,11 +24,30 @@ const Comment = (comment: TComment) => {
         />
         <Content content={comment.content}/>
         <Carousel image_urls={comment.image_urls} />
-        <div className={styles.Counts}>
+        <div className={styles.counts}>
           <UpvoteCount upvoteCount={comment.upvoteCount} />
           <CommentCount commentCount={comment.commentCount} />
         </div>
-        {comment.replies.length > 0 && (<h1 className={styles.reply}>there is a reply</h1>)}
+        <div className={styles.reply}>
+        {comment.replies.length > 0 && (
+          comment.replies.map((reply) => {
+            return (
+              <Reply
+                id={reply.id}
+                user={reply.user}
+                createdAt={reply.createdAt}
+                viewCount={reply.viewCount}
+                commentCount={reply.commentCount}
+                category={reply.category}
+                content={reply.content}
+                image_urls={reply.image_urls}
+                upvoteCount={reply.upvoteCount}
+              />
+            )
+          })
+        )}
+        </div>
+        <div className={styles.horizontalRule}></div>
       </section>
     )
   } else {

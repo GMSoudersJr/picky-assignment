@@ -1,6 +1,8 @@
-.UserSkinType {
-  padding: 0.12rem 0.3rem;
+.userSkinType {
+  padding: 0.25rem 0.5rem;
+  padding: 0.375rem 0.625rem;
   border-radius: 1.5rem;
   font-size: 0.75rem;
+  white-space: nowrap;
   background-color: rgb(var(--picky-pink-light-rgb));
 }

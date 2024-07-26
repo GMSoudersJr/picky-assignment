@@ -21,7 +21,7 @@ const ProfileImg = ({profileImg}: ProfileImageProps) => {
 
   return (
     <Image
-      className={styles.ProfileImg}
+      className={styles.profileImg}
       alt={profileImg.alt || "profile image"}
       src={completeImageUrl(profileImg)}
       height={60}

@@ -5,7 +5,7 @@ interface ViewProps {
 const ViewCount = ({views}: ViewProps) => {
 
   return (
-    <p>{views} views</p>
+    <p>👀 {views}</p>
   )
 }
 

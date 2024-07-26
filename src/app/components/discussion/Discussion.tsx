@@ -5,7 +5,8 @@ import DiscussionTitle from '@/components/discussion/Title';
 import Content from '@/components/Content';
 import Carousel from '@/components/Carousel';
 import styles from './Discussion.module.css';
-import Category from '../Category';
+import Category from '@/components/Category';
+import ViewCount from '@/components/ViewCount';
 
 interface DiscussionProps {
   id?: number;
@@ -49,6 +50,7 @@ const Discussion = (discussion: DiscussionProps) => {
         <Carousel image_urls={discussion.image_urls}/>
         <div className={styles.counts}>
           <UpvoteCount upvoteCount={discussion.upvoteCount} />
+          <ViewCount views={discussion.viewCount} />
           <CommentCount commentCount={discussion.commentCount} />
         </div>
       </section>

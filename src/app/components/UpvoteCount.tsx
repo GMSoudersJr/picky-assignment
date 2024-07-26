@@ -9,8 +9,9 @@ interface UpvotesProps {
 const Upvotes = ({upvoteCount}: UpvotesProps) => {
 
   return (
-    <section className={styles.UpvoteCount}>
+    <section className={styles.upvoteCount}>
       <Image
+        className={styles.upvoteCountIcon}
         src={upvoteIcon}
         alt="upvote icon"
         height={16}

@@ -9,8 +9,9 @@ interface CommentCountProps {
 const CommentCount = ({commentCount}: CommentCountProps) => {
 
   return (
-    <section className={styles.CommentCount}>
+    <section className={styles.commentCount}>
       <Image
+        className={styles.commentIcon}
         src={commentIcon}
         alt="upvote icon"
         height={16}

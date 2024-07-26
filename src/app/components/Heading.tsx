@@ -19,7 +19,7 @@ interface HeadingProps {
 
 const basePickyLink = "https://www.gopicky.com/";
 
-const Heading = ({user, createdAt, viewCount, location}: HeadingProps) => {
+const Heading = ({user, createdAt, location}: HeadingProps) => {
 
   return (
     <Link
@@ -27,24 +27,26 @@ const Heading = ({user, createdAt, viewCount, location}: HeadingProps) => {
       referrerPolicy="no-referrer"
       target="_blank"
     >
-      <div className={styles.Heading}>
+      <div className={styles.heading}>
+
         <ProfileImg profileImg={{
           src:user.image_url,
           alt:user.nick_name,
           location: location
           }}
         />
-        <div className={styles.Details}>
-          <div className={styles.UserDetails}>
+
+        <div className={styles.details}>
+
+          <div className={styles.userDetails}>
             <Username username={user.nick_name} />
             <UserSkinType userSkinType={user.skin_type} />
-          </div>
-          <div className={styles.DiscussionDetails}>
+            <div className={styles.dot}></div>
             <DateCreated createdAt={createdAt} />
-            <div className={styles.Dot}></div>
-            <ViewCount views={viewCount} />
           </div>
+
         </div>
+
       </div>
     </Link>
   )

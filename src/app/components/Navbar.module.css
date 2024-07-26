@@ -1,4 +1,4 @@
-.Navbar {
+.navbar {
   display: flex;
   gap: 3rem;
   align-items: center;
@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.SearchButton {
+.searchButton {
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
@@ -16,7 +16,17 @@
   transition: ease-in-out .5s;
 }
 
-.SearchButton:hover {
-  background-color: #000;
+.searchButton:hover {
+  background-color: rgb(var(--picky-pink-light-rgb));
   transition: ease-in-out .5s;
+}
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
 }

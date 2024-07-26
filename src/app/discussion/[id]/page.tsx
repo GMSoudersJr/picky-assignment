@@ -18,7 +18,6 @@ export default async function FullDiscussionPage({ params }: { params: { id: str
   return (
     <main className={styles.main}>
         <section id="discussion">
-          <h2>Discussion</h2>
           {discussion && discussion.map((discussion) => {
             if (discussion) {
               return (
@@ -44,6 +43,7 @@ export default async function FullDiscussionPage({ params }: { params: { id: str
         </section>
         <section id="comments" className={styles.commentSection}>
           <h2>Comments</h2>
+          <div className={styles.horizontalRule}></div>
           {comments && comments.map(( comment ) => {
             if (comment) {
               return (
