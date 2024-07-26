@@ -6,6 +6,8 @@ import Carousel from "@/components/Carousel";
 import UpvoteCount from "@/components/UpvoteCount";
 import CommentCount from "@/components/CommentCount";
 import Reply from "@/components/reply/Reply";
+import DateCreated from "@/components/DateCreated";
+import ViewCount from "@/components/ViewCount";
 
 const Comment = (comment: TComment) => {
 
@@ -19,10 +21,13 @@ const Comment = (comment: TComment) => {
             nick_name: comment.user.nick_name,
             skin_type: comment.user.skin_type
           }}
-          createdAt={comment.createdAt}
-          viewCount={comment.viewCount}
         />
         <Content content={comment.content}/>
+        <div className={styles.viewsSince}>
+          <DateCreated createdAt={comment.createdAt} />
+          <div className={styles.dot}></div>
+          <ViewCount views={comment.viewCount} />
+        </div>
         <Carousel image_urls={comment.image_urls} />
         <div className={styles.counts}>
           <UpvoteCount upvoteCount={comment.upvoteCount} />
@@ -33,6 +38,7 @@ const Comment = (comment: TComment) => {
           comment.replies.map((reply) => {
             return (
               <Reply
+                key={reply.id}
                 id={reply.id}
                 user={reply.user}
                 createdAt={reply.createdAt}

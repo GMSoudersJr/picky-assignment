@@ -11,6 +11,10 @@
   row-gap: 0.8rem;
 }
 
+.reply:first-child {
+  padding-top: 0.5rem;
+}
+
 .counts {
   display: flex;
   gap: 1rem;

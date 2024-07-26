@@ -3,10 +3,11 @@
   max-width: 600px;
   display: grid;
   grid-template-columns: calc(3.75rem + 0.5rem) 1fr;
-  grid-template-rows: repeat(5, min-content);
+  grid-template-rows: repeat(7, min-content);
   grid-template-areas:
   "heading heading"
   ". content"
+  ". viewsSince"
   ". carousel"
   ". counts"
   ". reply"
@@ -14,8 +15,16 @@
   row-gap: 0.8rem;
 }
 
+.comment:last-child {
+  border-bottom: none;
+}
+
 .reply {
   grid-area: reply;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 1fr);
+  row-gap: 0.5rem;
 }
 
 .horizontalRule {
@@ -27,4 +36,21 @@
   gap: 1rem;
   grid-area: counts;
   align-items: center;
+}
+
+.viewsSince {
+  display: flex;
+  gap: 0.5rem;
+  grid-area: viewsSince;
+  align-items: center;
+}
+
+.dot {
+  height: 0.25rem;
+  width: 0.25rem;
+  border-radius: 50%;
+  background-color: #D1D1D1;
+  display: inline-block;
+  place-self: center;
+  filter: brightness(50%);
 }

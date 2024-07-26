@@ -17,6 +17,7 @@ export default async function FullDiscussionPage({ params }: { params: { id: str
 
   return (
     <main className={styles.main}>
+      <div className={styles.fullDiscussionContainer}>
         <section id="discussion">
           {discussion && discussion.map((discussion) => {
             if (discussion) {
@@ -68,6 +69,7 @@ export default async function FullDiscussionPage({ params }: { params: { id: str
             }
           })}
         </section>
+      </div>
     </main>
   )
 }

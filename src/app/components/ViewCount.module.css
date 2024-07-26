@@ -4,6 +4,9 @@
   grid-template-rows: min-content;
   column-gap: 0.5rem;
   align-items: center;
+  font-size: 0.725rem;
+  font-weight: 400;
+  filter: brightness(50%);
 }
 
 

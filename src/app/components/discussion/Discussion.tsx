@@ -1,12 +1,13 @@
+import styles from './Discussion.module.css';
 import Heading from '@/components/Heading';
 import UpvoteCount from '@/components/UpvoteCount';
 import CommentCount from '@/components/CommentCount';
 import DiscussionTitle from '@/components/discussion/Title';
 import Content from '@/components/Content';
 import Carousel from '@/components/Carousel';
-import styles from './Discussion.module.css';
 import Category from '@/components/Category';
 import ViewCount from '@/components/ViewCount';
+import DateCreated from '@/components/DateCreated';
 
 interface DiscussionProps {
   id?: number;
@@ -42,15 +43,17 @@ const Discussion = (discussion: DiscussionProps) => {
             nick_name: discussion.user.nick_name,
             skin_type: discussion.user.skin_type
           }}
-          createdAt={discussion.createdAt}
-          viewCount={discussion.viewCount}
         />
         <DiscussionTitle title={discussion.title} id={discussion.id}/>
         <Content content={discussion.content} id={discussion.id}/>
+        <div className={styles.viewsSince}>
+          <DateCreated createdAt={discussion.createdAt} />
+          <div className={styles.dot}></div>
+          <ViewCount views={discussion.viewCount} />
+        </div>
         <Carousel image_urls={discussion.image_urls}/>
         <div className={styles.counts}>
           <UpvoteCount upvoteCount={discussion.upvoteCount} />
-          <ViewCount views={discussion.viewCount} />
           <CommentCount commentCount={discussion.commentCount} />
         </div>
       </section>

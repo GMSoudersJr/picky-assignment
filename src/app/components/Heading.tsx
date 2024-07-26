@@ -1,8 +1,6 @@
-import DateCreated from "@/components/DateCreated";
 import ProfileImg from "@/components/ProfileImg";
 import UserSkinType from "@/components/UserSkinType";
 import Username from "@/components/Username";
-import ViewCount from "@/components/ViewCount";
 import styles from "./Heading.module.css";
 import Link from "next/link";
 
@@ -12,14 +10,12 @@ interface HeadingProps {
     nick_name: string;
     skin_type: string;
   }
-  createdAt: string;
-  viewCount: number;
   location: 'discussion' | 'comment' | 'reply';
 }
 
 const basePickyLink = "https://www.gopicky.com/";
 
-const Heading = ({user, createdAt, location}: HeadingProps) => {
+const Heading = ({user, location}: HeadingProps) => {
 
   return (
     <Link
@@ -41,8 +37,6 @@ const Heading = ({user, createdAt, location}: HeadingProps) => {
           <div className={styles.userDetails}>
             <Username username={user.nick_name} />
             <UserSkinType userSkinType={user.skin_type} />
-            <div className={styles.dot}></div>
-            <DateCreated createdAt={createdAt} />
           </div>
 
         </div>
