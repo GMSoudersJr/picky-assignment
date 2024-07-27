@@ -12,6 +12,6 @@ export async function GET(request: Request) {
     return entry.id.toString() === id
   });
 
-  return Response.json([discussion]);
+  return Response.json(result);
 }
 
