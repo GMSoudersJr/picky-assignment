@@ -13,7 +13,7 @@ Required:
 #clone the repository into the current directory over SSH:
 git clone git@github.com:GMSoudersJr/picky-assignment.git
 #change into newly cloned directory:
-cd timer
+cd picky-assignment
 #run this command to install all dependencies:
 npm install
 ```
