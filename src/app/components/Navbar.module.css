@@ -5,13 +5,14 @@
   justify-content: center;
   padding: 1rem;
   position: relative;
-  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.7vw, 1.5rem);
   list-style: none;
 }
 
 .picky {
   grid-area: picky;
   color: rgb(var(--picky-pink-light-rgb));
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -62,7 +63,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 505px) {
   .navbar{
     display: grid;
     grid-template-columns: repeat(6, 1fr);

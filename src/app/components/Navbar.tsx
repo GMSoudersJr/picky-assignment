@@ -56,7 +56,7 @@ const Navbar = () => {
 const PAGES = [
   {
     path: "/",
-    label: "Picky",
+    label: "picky",
     class: 'picky'
   },
   {
