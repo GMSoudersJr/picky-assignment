@@ -23,8 +23,8 @@
   grid-area: reply;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto, 1fr);
-  row-gap: 0.5rem;
+  grid-template-rows: min-content repeat(auto, 1fr);
+  row-gap: 0.8rem;
 }
 
 .horizontalRule {

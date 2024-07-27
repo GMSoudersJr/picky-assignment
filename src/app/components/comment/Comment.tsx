@@ -1,3 +1,5 @@
+'use client';
+
 import type { TComment } from "@/types";
 import styles from './Comment.module.css';
 import Heading from "@/components/Heading";
@@ -9,8 +11,12 @@ import Reply from "@/components/reply/Reply";
 import DateCreated from "@/components/DateCreated";
 import ViewCount from "@/components/ViewCount";
 import BookmarkIcon from "../Bookmark";
+import ReplyToggler from "../reply/ReplyToggler";
+import { useState } from "react";
 
 const Comment = (comment: TComment) => {
+
+  const [toggleReplies, setToggleReplies] = useState(false);
 
   if (comment) {
     return (
@@ -46,7 +52,11 @@ const Comment = (comment: TComment) => {
           />
         </div>
         <div className={styles.reply}>
-        {comment.replies.length > 0 && (
+          <ReplyToggler
+            onToggle={setToggleReplies}
+            numberOfReplies={comment.replies.length}
+          />
+          {toggleReplies && comment.replies.length > 0 ? (
           comment.replies.map((reply) => {
             return (
               <Reply
@@ -63,7 +73,10 @@ const Comment = (comment: TComment) => {
               />
             )
           })
-        )}
+
+          ) : (
+            <></>
+          )}
         </div>
         <div className={styles.horizontalRule}></div>
       </section>
