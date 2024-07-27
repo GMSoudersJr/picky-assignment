@@ -13,6 +13,7 @@ import ViewCount from "@/components/ViewCount";
 import BookmarkIcon from "../Bookmark";
 import ReplyToggler from "../reply/ReplyToggler";
 import { useState } from "react";
+import {COMPILER_NAMES} from "next/dist/shared/lib/constants";
 
 const Comment = (comment: TComment) => {
 
@@ -52,10 +53,14 @@ const Comment = (comment: TComment) => {
           />
         </div>
         <div className={styles.reply}>
+          {comment.replies.length > 0 ? (
           <ReplyToggler
             onToggle={setToggleReplies}
             numberOfReplies={comment.replies.length}
           />
+          ) : (
+          <></>
+           )}
           {toggleReplies && comment.replies.length > 0 ? (
           comment.replies.map((reply) => {
             return (
@@ -73,9 +78,8 @@ const Comment = (comment: TComment) => {
               />
             )
           })
-
           ) : (
-            <></>
+          <></>
           )}
         </div>
         <div className={styles.horizontalRule}></div>

@@ -14,8 +14,6 @@ interface ReplyTogglerProps {
 
 const ReplyToggler = ({ numberOfReplies, onToggle }: ReplyTogglerProps) => {
 
-  if (numberOfReplies === 0) return (<></>);
-
   const [showReplies, setShowReplies] = useState(false);
 
   function handleClick() {
