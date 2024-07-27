@@ -6,6 +6,7 @@
   align-items: center;
 }
 
+/* Better to use when a user has commented
 .commentIcon {
   filter:
   brightness(var(--gray-to-pink-brightness-filter))
@@ -14,3 +15,4 @@
   saturate(var(--gray-to-pink-saturate-filter))
   hue-rotate(var(--gray-to-pink-hue-rotate-filter));
 }
+*/
