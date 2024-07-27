@@ -9,7 +9,8 @@
   list-style: none;
 }
 
-.listitem:first-child {
+.picky {
+  grid-area: picky;
   color: rgb(var(--picky-pink-light-rgb));
   font-weight: 700;
 }
@@ -28,7 +29,7 @@
   transition: ease-in-out .5s;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 949px) {
   .navbar {
     display: grid;
     grid-template-columns: repeat(3, 1fr) 15%;
@@ -41,9 +42,6 @@
     align-items: center;
   }
 
-  .picky {
-    grid-area: picky;
-  }
   .products {
     grid-area: products;
   }

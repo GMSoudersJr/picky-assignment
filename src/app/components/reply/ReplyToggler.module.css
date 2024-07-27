@@ -8,4 +8,5 @@
   background-color: rgb(var(--picky-pink-light-rgb));
   border-radius: var(--border-radius);
   font-weight: 600;
+  border: none;
 }

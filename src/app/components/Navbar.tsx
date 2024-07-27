@@ -10,11 +10,12 @@ const Navbar = () => {
       {PAGES.map((page) => {
         if (page.path.startsWith('/')) {
           return(
-            <li key={page.path} className={styles.listitem}>
+            <li
+              key={page.path}
+              className={styles[`${page.class}`]}
+            >
               <Link
-                key={page.path}
                 href={page.path}
-                className={styles[`${page.class}`]}
               >
                 {page.label}
               </Link>
@@ -22,13 +23,14 @@ const Navbar = () => {
           )
         } else {
           return(
-            <li key={page.path} className={styles.listitem}>
+            <li
+              key={page.path}
+              className={styles[`${page.class}`]}
+            >
               <Link
-                key={page.path}
                 href={page.path}
                 referrerPolicy="no-referrer"
                 target="_blank"
-                className={styles[`${page.class}`]}
               >
                 {page.label}
               </Link>
