@@ -13,7 +13,11 @@ interface ReplyTogglerProps {
 
 const ReplyToggler = ({ numberOfReplies, onToggle }: ReplyTogglerProps) => {
 
-  if (numberOfReplies === 0) return (<></>)
+  if (numberOfReplies === 0) return (<></>);
+  const singular = (count: number): boolean => {
+    return count === 1;
+  }
+
 
   const [showReplies, setShowReplies] = useState(false);
 
@@ -34,7 +38,7 @@ const ReplyToggler = ({ numberOfReplies, onToggle }: ReplyTogglerProps) => {
         alt={showReplies ? 'up icon' : 'down icon'}
       />
       <p style={lato.style}>
-        {showReplies  ? 'hide replies' : 'show replies'}
+        {showReplies  ? 'hide' : 'show'} {singular(numberOfReplies) ? 'reply' : 'replies'}
       </p>
     </button>
 
