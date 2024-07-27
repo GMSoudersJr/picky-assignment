@@ -4,6 +4,7 @@ import upvoteIcon from '@/images/icon-upvote-14-px@3x.png';
 import Image from 'next/image';
 import styles from './UpvoteCount.module.css';
 import { useState } from 'react';
+import {lato} from '@/fonts';
 
 interface UpvotesProps {
   upvoteCount: number;
@@ -33,7 +34,7 @@ const Upvotes = ({upvoteCount, id, location}: UpvotesProps) => {
         width={16}
         onClick={handleClick}
       />
-      <p>{upvotes}</p>
+      <p style={lato.style}>{upvotes}</p>
     </section>
   )
 }

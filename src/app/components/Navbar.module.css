@@ -6,6 +6,11 @@
   padding: 1rem;
   position: relative;
   font-size: clamp(0.8rem, 2vw, 1.5rem);
+  list-style: none;
+}
+
+.listitem:first-child {
+  color: rgb(var(--picky-pink-light-rgb));
 }
 
 .searchButton {

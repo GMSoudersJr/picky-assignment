@@ -1,3 +1,4 @@
+import { lato } from "@/fonts";
 import styles from './Category.module.css';
 
 interface CategoryProps {
@@ -7,7 +8,12 @@ interface CategoryProps {
 const Category = ({category}: CategoryProps) => {
 
   return (
-    <p className={styles.category}>{category}</p>
+    <p
+      className={styles.category}
+      style={lato.style}
+    >
+      {category}
+    </p>
   )
 }
 

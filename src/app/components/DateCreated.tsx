@@ -1,3 +1,4 @@
+import {lato} from '@/fonts';
 import styles from './DateCreated.module.css';
 
 interface DateCreatedProps {
@@ -14,7 +15,12 @@ const DateCreated = ({createdAt}: DateCreatedProps) => {
   })
 
   return (
-    <p className={styles.createdAt}>{date}</p>
+    <p
+      className={styles.createdAt}
+      style={lato.style}
+    >
+      {date}
+    </p>
   )
 }
 

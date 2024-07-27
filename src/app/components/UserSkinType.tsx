@@ -1,3 +1,4 @@
+import {lato} from '@/fonts';
 import styles from './UserSkinType.module.css';
 
 interface UserSkinTypeProps {
@@ -7,7 +8,12 @@ interface UserSkinTypeProps {
 const UserSkinType = ({userSkinType}: UserSkinTypeProps) => {
 
   return (
-    <p className={styles.userSkinType}>{userSkinType}</p>
+    <p
+      className={styles.userSkinType}
+      style={lato.style}
+    >
+      {userSkinType}
+    </p>
   )
 }
 

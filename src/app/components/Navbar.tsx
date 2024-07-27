@@ -6,29 +6,33 @@ import searchIcon from '@/images/search@3x.png'
 const Navbar = () => {
 
   return (
-    <div className={styles.navbar}>
+    <ul className={styles.navbar}>
       {PAGES.map((page) => {
         if (page.path.startsWith('/')) {
           return(
-            <Link
-              key={page.path}
-              href={page.path}
-              className={styles[`${page.class}`]}
-            >
-              {page.label}
-            </Link>
+            <li key={page.path} className={styles.listitem}>
+              <Link
+                key={page.path}
+                href={page.path}
+                className={styles[`${page.class}`]}
+              >
+                {page.label}
+              </Link>
+            </li>
           )
         } else {
           return(
-            <Link
-              key={page.path}
-              href={page.path}
-              referrerPolicy="no-referrer"
-              target="_blank"
-              className={styles[`${page.class}`]}
-            >
-              {page.label}
-            </Link>
+            <li key={page.path} className={styles.listitem}>
+              <Link
+                key={page.path}
+                href={page.path}
+                referrerPolicy="no-referrer"
+                target="_blank"
+                className={styles[`${page.class}`]}
+              >
+                {page.label}
+              </Link>
+            </li>
           )
         }
       })}
@@ -43,7 +47,7 @@ const Navbar = () => {
           />
         </button>
       </div>
-    </div>
+    </ul>
   );
 };
 

@@ -7,7 +7,7 @@ interface UsernameProps {
 const Username = ({username}: UsernameProps) => {
 
   return (
-    <p className={styles.username}>{username}</p>
+    <h3 className={styles.username}>{username}</h3>
   )
 }
 

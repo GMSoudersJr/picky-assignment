@@ -1,6 +1,7 @@
 import commentIcon from '@/images/icon-comment-14-px@3x.png';
 import Image from 'next/image';
 import styles from './CommentCount.module.css';
+import {lato} from '@/fonts';
 
 interface CommentCountProps {
   commentCount: number
@@ -17,7 +18,7 @@ const CommentCount = ({commentCount}: CommentCountProps) => {
         height={16}
         width={16}
       />
-      <p>{commentCount}</p>
+      <p style={lato.style}>{commentCount}</p>
     </div>
   )
 }
