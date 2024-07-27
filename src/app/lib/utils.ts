@@ -6,7 +6,7 @@ export const isSingular = (count: number): boolean => {
 
 const dev = process.env.NODE_ENV !== 'production';
 
-const server = dev ? 'http://localhost:3000/api' : '';
+const server = dev ? 'http://localhost:3000/api' : `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`;
 
 export async function getDiscussions(): Promise<TDiscussion[] | undefined> {
   let result: TDiscussion[] = [];
