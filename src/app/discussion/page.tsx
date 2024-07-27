@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 import Discussion from "@/app/components/discussion/Discussion";
-import { getDiscussions } from "../lib/utils";
+import { getDiscussions, isSingular } from "@/app/lib/utils";
 
 export const metadata: Metadata = {
   title: "Discussion | Picky Assignment",
@@ -16,7 +16,8 @@ export default async function DiscussionPage() {
     <main className={styles.main}>
       <div className={styles.container}>
         <h4 className={styles.heading}>
-          {discussions && discussions.length} Discussion{discussions && discussions.length > 1 ? 's' : ''}
+          {discussions && discussions.length} {discussions && isSingular(discussions.length)
+          ? 'Discussion' : 'Discussions'}
         </h4>
 
         {discussions && discussions.map((discussion) => {

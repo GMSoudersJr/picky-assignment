@@ -21,7 +21,10 @@ const Reply = (reply: TReply) => {
             skin_type: reply.user.skin_type
           }}
         />
-        <Content content={reply.content}/>
+        <Content
+          content={reply.content}
+          disabled={true}
+        />
         <div className={styles.viewsSince}>
           <DateCreated createdAt={reply.createdAt} />
           <div className={styles.dot}></div>
@@ -29,7 +32,10 @@ const Reply = (reply: TReply) => {
         </div>
         <Carousel image_urls={reply.image_urls} />
         <div className={styles.counts}>
-          <UpvoteCount upvoteCount={reply.upvoteCount} />
+          <UpvoteCount
+            location='reply'
+            upvoteCount={reply.upvoteCount}
+          />
           <CommentCount commentCount={reply.commentCount} />
         </div>
       </section>

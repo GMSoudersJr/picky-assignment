@@ -5,6 +5,7 @@ import { SetStateAction, useState } from "react";
 import { Dispatch } from "react";
 import styles from './ReplyToggler.module.css';
 import {lato} from "@/fonts";
+import { isSingular } from "@/app/lib/utils";
 
 interface ReplyTogglerProps {
   numberOfReplies: number;
@@ -14,10 +15,6 @@ interface ReplyTogglerProps {
 const ReplyToggler = ({ numberOfReplies, onToggle }: ReplyTogglerProps) => {
 
   if (numberOfReplies === 0) return (<></>);
-  const singular = (count: number): boolean => {
-    return count === 1;
-  }
-
 
   const [showReplies, setShowReplies] = useState(false);
 
@@ -38,7 +35,7 @@ const ReplyToggler = ({ numberOfReplies, onToggle }: ReplyTogglerProps) => {
         alt={showReplies ? 'up icon' : 'down icon'}
       />
       <p style={lato.style}>
-        {showReplies  ? 'hide' : 'show'} {singular(numberOfReplies) ? 'reply' : 'replies'}
+        {showReplies  ? 'hide' : 'show'} {isSingular(numberOfReplies) ? 'reply' : 'replies'}
       </p>
     </button>
 

@@ -1,5 +1,9 @@
 import type { TDiscussion, TComment } from '@/types';
 
+export const isSingular = (count: number): boolean => {
+  return count === 1;
+}
+
 export async function getDiscussion(id: string): Promise<TDiscussion[] | undefined> {
   let result: TDiscussion[] = [];
   try {
