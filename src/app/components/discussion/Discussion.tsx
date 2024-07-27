@@ -8,6 +8,7 @@ import Carousel from '@/components/Carousel';
 import Category from '@/components/Category';
 import ViewCount from '@/components/ViewCount';
 import DateCreated from '@/components/DateCreated';
+import BookmarkIcon from '../Bookmark';
 
 interface DiscussionProps {
   id?: number;
@@ -27,7 +28,7 @@ interface DiscussionProps {
     id: number;
     label: string;
   }
-
+  disableLink: boolean;
 }
 
 const Discussion = (discussion: DiscussionProps) => {
@@ -44,8 +45,16 @@ const Discussion = (discussion: DiscussionProps) => {
             skin_type: discussion.user.skin_type
           }}
         />
-        <DiscussionTitle title={discussion.title} id={discussion.id}/>
-        <Content content={discussion.content} id={discussion.id}/>
+        <DiscussionTitle
+          title={discussion.title}
+          id={discussion.id}
+          disabled={discussion.disableLink}
+        />
+        <Content
+          content={discussion.content}
+          id={discussion.id}
+          disabled={discussion.disableLink}
+        />
         <div className={styles.viewsSince}>
           <DateCreated createdAt={discussion.createdAt} />
           <div className={styles.dot}></div>
@@ -53,8 +62,13 @@ const Discussion = (discussion: DiscussionProps) => {
         </div>
         <Carousel image_urls={discussion.image_urls}/>
         <div className={styles.counts}>
-          <UpvoteCount upvoteCount={discussion.upvoteCount} />
+          <UpvoteCount
+            location='discussion'
+            id={discussion.id}
+            upvoteCount={discussion.upvoteCount}
+          />
           <CommentCount commentCount={discussion.commentCount} />
+          <BookmarkIcon location='discussion' id={discussion.id}  />
         </div>
       </section>
     )

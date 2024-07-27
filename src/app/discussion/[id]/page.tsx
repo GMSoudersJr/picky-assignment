@@ -23,16 +23,18 @@ export default async function FullDiscussionPage({ params }: { params: { id: str
             if (discussion) {
               return (
                 <Discussion
-                  key={discussion.id}
                   category={discussion.category}
-                  createdAt={discussion.createdAt}
-                  user={discussion.user}
                   commentCount={discussion.commentCount}
-                  upvoteCount={discussion.upvoteCount}
-                  viewCount={discussion.viewCount}
-                  title={discussion.title}
-                  image_urls={discussion.image_urls}
                   content={discussion.content}
+                  createdAt={discussion.createdAt}
+                  disableLink={true}
+                  id={discussion.id}
+                  image_urls={discussion.image_urls}
+                  key={discussion.id}
+                  title={discussion.title}
+                  upvoteCount={discussion.upvoteCount}
+                  user={discussion.user}
+                  viewCount={discussion.viewCount}
                 />
               )
             } else {
@@ -49,17 +51,17 @@ export default async function FullDiscussionPage({ params }: { params: { id: str
             if (comment) {
               return (
                 <Comment
-                  key={comment.id}
-                  id={comment.id}
-                  content={comment.content}
-                  image_urls={comment.image_urls}
-                  viewCount={comment.viewCount}
-                  upvoteCount={comment.upvoteCount}
-                  commentCount={comment.commentCount}
                   category={comment.category}
-                  user={comment.user}
+                  commentCount={comment.commentCount}
+                  content={comment.content}
                   createdAt={comment.createdAt}
+                  id={comment.id}
+                  image_urls={comment.image_urls}
+                  key={comment.id}
                   replies={comment.replies}
+                  upvoteCount={comment.upvoteCount}
+                  user={comment.user}
+                  viewCount={comment.viewCount}
                 />
               )
             } else {

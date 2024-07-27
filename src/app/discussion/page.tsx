@@ -23,17 +23,18 @@ export default async function DiscussionPage() {
           if (discussion) {
             return (
               <Discussion
-                key={discussion.id}
                 category={discussion.category}
-                createdAt={discussion.createdAt}
-                user={discussion.user}
                 commentCount={discussion.commentCount}
-                upvoteCount={discussion.upvoteCount}
-                viewCount={discussion.viewCount}
-                title={discussion.title}
+                content={discussion.content}
+                createdAt={discussion.createdAt}
+                disableLink={false}
                 id={discussion.id}
                 image_urls={discussion.image_urls}
-                content={discussion.content}
+                key={discussion.id}
+                title={discussion.title}
+                upvoteCount={discussion.upvoteCount}
+                user={discussion.user}
+                viewCount={discussion.viewCount}
               />
             )
           } else {

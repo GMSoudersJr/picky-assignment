@@ -8,6 +8,7 @@ import CommentCount from "@/components/CommentCount";
 import Reply from "@/components/reply/Reply";
 import DateCreated from "@/components/DateCreated";
 import ViewCount from "@/components/ViewCount";
+import BookmarkIcon from "../Bookmark";
 
 const Comment = (comment: TComment) => {
 
@@ -22,7 +23,10 @@ const Comment = (comment: TComment) => {
             skin_type: comment.user.skin_type
           }}
         />
-        <Content content={comment.content}/>
+        <Content
+          content={comment.content}
+          disabled={true}
+        />
         <div className={styles.viewsSince}>
           <DateCreated createdAt={comment.createdAt} />
           <div className={styles.dot}></div>
@@ -30,24 +34,32 @@ const Comment = (comment: TComment) => {
         </div>
         <Carousel image_urls={comment.image_urls} />
         <div className={styles.counts}>
-          <UpvoteCount upvoteCount={comment.upvoteCount} />
+          <UpvoteCount
+            id={comment.id}
+            location="comment"
+            upvoteCount={comment.upvoteCount}
+          />
           <CommentCount commentCount={comment.commentCount} />
+          <BookmarkIcon
+            id={comment.id}
+            location="comment"
+          />
         </div>
         <div className={styles.reply}>
         {comment.replies.length > 0 && (
           comment.replies.map((reply) => {
             return (
               <Reply
-                key={reply.id}
-                id={reply.id}
-                user={reply.user}
-                createdAt={reply.createdAt}
-                viewCount={reply.viewCount}
-                commentCount={reply.commentCount}
                 category={reply.category}
+                commentCount={reply.commentCount}
                 content={reply.content}
+                createdAt={reply.createdAt}
+                id={reply.id}
+                key={reply.id}
                 image_urls={reply.image_urls}
                 upvoteCount={reply.upvoteCount}
+                user={reply.user}
+                viewCount={reply.viewCount}
               />
             )
           })
