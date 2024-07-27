@@ -1,3 +1,6 @@
+import {lato} from '@/fonts';
+import styles from './ViewCount.module.css';
+
 interface ViewProps {
   views: number
 }
@@ -5,7 +8,12 @@ interface ViewProps {
 const ViewCount = ({views}: ViewProps) => {
 
   return (
-    <p>{views} views</p>
+    <p
+      style={lato.style}
+      className={styles.viewCount}
+    >
+      {views} Views
+    </p>
   )
 }
 

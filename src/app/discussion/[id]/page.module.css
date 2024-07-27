@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.fullDiscussionContainer {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+}
+
+.commentSection {
+  padding-top: 1.5rem;
+  margin-left: calc(3.75rem + 0.5rem);
+  display: grid;
+  row-gap: 1rem;
+}
+
+.horizontalRule {
+  height: 0.025rem;
+  width: 100%;
+  background-color: #C0C0C0;
+}
+/* Mobile */
+@media (max-width: 700px) {
+  .main {
+    padding: 6rem 0.5rem 6rem 0.5rem;
+  }
+  .commentSection {
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .fullDiscussionContainer {
+    padding: 1rem 1.2rem;
+    border: none;
+    border-radius: none;
+  }
+}
+
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}
+
+@media (prefers-color-scheme: dark) {
+}

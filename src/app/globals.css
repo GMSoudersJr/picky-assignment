@@ -38,6 +38,16 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --picky-pink-dark-rgb: 228, 101, 131;
+  --picky-pink-light-rgb: 232, 162, 188;
+
+  --gray-to-pink-brightness-filter: 50%;
+  --gray-to-pink-invert-filter: 1;
+  --gray-to-pink-sepia-filter: 0.8;
+  --gray-to-pink-saturate-filter: 4;
+  --gray-to-pink-hue-rotate-filter: -60deg;
+
 }
 
 @media (prefers-color-scheme: dark) {

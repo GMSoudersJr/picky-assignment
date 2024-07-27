@@ -1,0 +1,81 @@
+.navbar {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  font-size: clamp(0.8rem, 1.7vw, 1.5rem);
+  list-style: none;
+}
+
+.picky {
+  grid-area: picky;
+  color: rgb(var(--picky-pink-light-rgb));
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.searchButton {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #FFF;
+  transition: ease-in-out .5s;
+}
+
+.searchButton:hover {
+  background-color: rgb(var(--picky-pink-light-rgb));
+  transition: ease-in-out .5s;
+}
+
+@media (max-width: 949px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 15%;
+    grid-template-rows: repeat(2, min-content);
+    gap: 1rem;
+    grid-template-areas:
+    "picky products curation search"
+    "discussion pickyForCreators joinPicky search";
+    justify-items: center;
+    align-items: center;
+  }
+
+  .products {
+    grid-area: products;
+  }
+  .curation {
+    grid-area: curation;
+  }
+  .discussion {
+    grid-area: discussion;
+  }
+  .pickyForCreators {
+    grid-area: pickyForCreators;
+  }
+  .joinPicky {
+    grid-area: joinPicky;
+  }
+  .search {
+    grid-area: search;
+  }
+}
+
+@media (max-width: 505px) {
+  .navbar{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+    "picky picky picky products products products"
+    "curation curation search search discussion discussion"
+    "pickyForCreators pickyForCreators pickyForCreators joinPicky joinPicky joinPicky";
+  }
+
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}

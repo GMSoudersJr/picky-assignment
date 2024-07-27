@@ -10,7 +10,7 @@ type User = {
   skin_type: string;
 }
 
-export type Discussion = {
+export type TDiscussion = {
   id: number;
   title: string;
   content: string;
@@ -21,8 +21,9 @@ export type Discussion = {
   category: Category;
   user: User;
   createdAt: string;
-}
-export type Reply = {
+} | undefined;
+
+export type TReply = {
   id: number;
   content: string;
   image_urls: string[] | [];
@@ -34,7 +35,7 @@ export type Reply = {
   createdAt: string;
 }
 
-export type Comment = {
+export type TComment = {
   id: number;
   content: string;
   image_urls: string[] | [];
@@ -44,5 +45,5 @@ export type Comment = {
   category: Category;
   user: User;
   createdAt: string;
-  replies: Reply[] | [];
-}
+  replies: TReply[] | [];
+} | undefined;

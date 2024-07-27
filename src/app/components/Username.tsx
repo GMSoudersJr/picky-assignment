@@ -1,3 +1,5 @@
+import styles from './Username.module.css'
+
 interface UsernameProps {
   username: string
 }
@@ -5,7 +7,7 @@ interface UsernameProps {
 const Username = ({username}: UsernameProps) => {
 
   return (
-    <h1>{username}</h1>
+    <h3 className={styles.username}>{username}</h3>
   )
 }
 

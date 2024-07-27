@@ -9,7 +9,7 @@ interface CarouselProps {
 const Carousel = ({image_urls}: CarouselProps) => {
 
   return (
-    <div className={styles.Carousel}>
+    <div className={styles.carousel}>
       {image_urls.map(( image_url, i ) => (
         <Image
           key={`${image_url}-${i}`}

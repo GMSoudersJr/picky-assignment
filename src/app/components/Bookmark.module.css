@@ -1,13 +1,8 @@
-.commentCount {
-  display: grid;
-  grid-template-columns: repeat(2, min-content);
-  grid-template-rows: min-content;
-  column-gap: 0.5rem;
-  align-items: center;
+.notBookmarked {
+  filter: none;
 }
 
-/* Better to use when a user has commented
-.commentIcon {
+.bookmarked {
   filter:
   brightness(var(--gray-to-pink-brightness-filter))
   invert(var(--gray-to-pink-invert-filter))
@@ -15,4 +10,3 @@
   saturate(var(--gray-to-pink-saturate-filter))
   hue-rotate(var(--gray-to-pink-hue-rotate-filter));
 }
-*/

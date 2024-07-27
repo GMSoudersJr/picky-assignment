@@ -1,17 +1,19 @@
-.discussion {
-  max-width: 800px;
+.reply {
+  max-width: 600px;
   display: grid;
   grid-template-columns: calc(3.75rem + 0.5rem) 1fr;
-  grid-template-rows: repeat(7, min-content);
+  grid-template-rows: repeat(5, min-content);
   grid-template-areas:
-  "category category"
   "heading heading"
-  ". title"
   ". content"
   ". viewsSince"
   ". carousel"
   ". counts";
   row-gap: 0.8rem;
+}
+
+.reply:first-child {
+  padding-top: 0.5rem;
 }
 
 .counts {
@@ -39,16 +41,15 @@
 }
 
 @media (max-width: 700px) {
-  .discussion {
+  .reply {
     grid-template-areas:
-    "category category"
     "heading heading"
-    "title title"
     "content content"
     "viewsSince viewsSince"
     "carousel carousel"
     "counts counts";
+    /*border-left: 0.03rem solid rgba(210, 215, 211, 0.4);*/
   }
-
 }
+
 
