@@ -69,8 +69,8 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, min-content);
     grid-template-areas:
-    "picky picky picky products products products"
-    "curation curation search search discussion discussion"
+    "picky picky picky search search search"
+    "curation curation products products discussion discussion"
     "pickyForCreators pickyForCreators pickyForCreators joinPicky joinPicky joinPicky";
   }
 
