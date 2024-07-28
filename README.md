@@ -37,6 +37,6 @@ followed by:
 ```bash
 npm start
 ```
-to run the server
+to run the production server.
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
