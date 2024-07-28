@@ -16,4 +16,5 @@
 
 .directionIcon {
   background-color: rgb(var(--picky-pink-light-rgb));
+  border-radius: var(--border-radius);
 }
