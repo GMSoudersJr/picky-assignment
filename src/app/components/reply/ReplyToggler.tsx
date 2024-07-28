@@ -22,20 +22,21 @@ const ReplyToggler = ({ numberOfReplies, onToggle }: ReplyTogglerProps) => {
   }
 
   return (
-    <button
+    <div
       onClick={handleClick}
       className={styles.toggler}
     >
+      <p style={lato.style} className={styles.text}>
+        {showReplies  ? 'hide' : 'show'} {isSingular(numberOfReplies) ? 'reply' : 'replies'}
+      </p>
       <Image
-        src={showReplies ? upIcon : downIcon}
+        className={styles.directionIcon}
+        src={showReplies ? downIcon : upIcon}
         height={19}
         width={19}
         alt={showReplies ? 'up icon' : 'down icon'}
       />
-      <p style={lato.style}>
-        {showReplies  ? 'hide' : 'show'} {isSingular(numberOfReplies) ? 'reply' : 'replies'}
-      </p>
-    </button>
+    </div>
 
   )
 }
