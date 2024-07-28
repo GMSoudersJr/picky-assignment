@@ -4,9 +4,7 @@ export const isSingular = (count: number): boolean => {
   return count === 1;
 }
 
-const dev = process.env.NODE_ENV !== 'production';
-
-const server = dev ? 'http://localhost:3000/api' : `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/api`;
+const server = 'http://localhost:3000/api';
 
 export async function getDiscussion(id: string): Promise<TDiscussion[] | undefined> {
   let result: TDiscussion[] = [];
