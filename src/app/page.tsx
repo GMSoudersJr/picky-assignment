@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
 
-      <h1>Gerald's Picky Frontend Assignment</h1>
+      <h1>Picky Frontend Assignment by Gerald</h1>
       <h2>
         Navigate to <Link href='/discussion' > discussion </Link> to get started!
       </h2>
