@@ -2,11 +2,19 @@
   filter: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
-  padding: 0.25rem 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.text {
+  color: rgb(var(--picky-pink-light-rgb));
+  border-bottom: 1px solid rgb(var(--picky-pink-light-rgb));
+}
+
+.directionIcon {
   background-color: rgb(var(--picky-pink-light-rgb));
   border-radius: var(--border-radius);
-  font-weight: 600;
-  border: none;
 }

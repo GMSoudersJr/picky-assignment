@@ -60,16 +60,6 @@ const PAGES = [
     class: 'picky'
   },
   {
-    path: "/products",
-    label: "products",
-    class: 'products'
-  },
-  {
-    path: "/curation",
-    label: "curation",
-    class: 'curation'
-  },
-  {
     path: "/discussion",
     label: "discussion",
     class: 'discussion'

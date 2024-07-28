@@ -7,6 +7,7 @@ import UpvoteCount from "@/components/UpvoteCount";
 import CommentCount from "@/components/CommentCount";
 import DateCreated from "@/components/DateCreated";
 import ViewCount from "@/components/ViewCount";
+import BookmarkIcon from '../Bookmark';
 
 const Reply = (reply: TReply) => {
 
@@ -37,6 +38,10 @@ const Reply = (reply: TReply) => {
             upvoteCount={reply.upvoteCount}
           />
           <CommentCount commentCount={reply.commentCount} />
+          <BookmarkIcon
+            id={reply.id}
+            location='reply'
+          />
         </div>
       </section>
     )
