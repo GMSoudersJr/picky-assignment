@@ -1,24 +1,28 @@
-This is Gerald's Next.js Picky assignment bootstrapped with [`create-next-app`]
+## Gerald's Next.js Picky assignment bootstrapped with `create-next-app`
 
 ## Getting Started
 
-Optional:
+Optionally, make a new directory and change into it:
 ```bash
-#make a directory and change into it:
 mkdir newDirectory && cd newDirectory
 ```
 
 Required:
+
+clone the repository into the current directory over SSH:
 ```bash
-#clone the repository into the current directory over SSH:
 git clone git@github.com:GMSoudersJr/picky-assignment.git
-#change into newly cloned directory:
+```
+change into newly cloned directory:
+```bash
 cd picky-assignment
-#run this command to install all dependencies:
+```
+install all dependencies:
+```bash
 npm install
 ```
 
-for a local development server, run:
+for a local development server:
 ```bash
 npm run dev
 ```
@@ -33,6 +37,6 @@ followed by:
 ```bash
 npm start
 ```
+to run the server
 
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
