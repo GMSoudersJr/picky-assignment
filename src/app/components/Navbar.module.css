@@ -42,8 +42,8 @@
     align-items: center;
   }
 
-  .products {
-    grid-area: products;
+  .discussion {
+    grid-area: discussion;
   }
   .pickyForCreators {
     grid-area: pickyForCreators;
