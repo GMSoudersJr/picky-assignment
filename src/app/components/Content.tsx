@@ -9,6 +9,7 @@ interface ContentProps {
 }
 
 const Content = ({content, id, disabled}: ContentProps) => {
+  let contentToDisplay = content;
 
   if (disabled) {
     return (
@@ -16,13 +17,17 @@ const Content = ({content, id, disabled}: ContentProps) => {
         style={lato.style}
         className={styles.content}
       >
-        {content}
+        {contentToDisplay}
       </p>
     )
   } else {
+    if (content.length > 140) contentToDisplay = content.slice(0, 100) + '...'
     return (
       <Link href={`/discussion/${id}`} className={styles.content}>
-        <p style={lato.style}>{content}</p>
+        <p
+          className={styles.contentLink}
+          style={lato.style}>{contentToDisplay}
+        </p>
       </Link>
     )
   }
