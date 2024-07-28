@@ -10,7 +10,7 @@ export async function getDiscussion(id: string): Promise<TDiscussion[] | undefin
   let result: TDiscussion[] = [];
   try {
     const res = await fetch(`${server}/discussion/search?id=${id}`)
-    console.log("Response @getDiscussion", res);
+
     if (!res.ok) return result;
 
     result = await res.json();
