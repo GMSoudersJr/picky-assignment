@@ -65,6 +65,10 @@
     "picky picky picky search search search"
     "discussion discussion pickyForCreators pickyForCreators joinPicky joinPicky";
   }
+  .pickyForCreators {
+    grid-area: pickyForCreators;
+    text-align: center;
+  }
 
 }
 
