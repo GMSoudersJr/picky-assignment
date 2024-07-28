@@ -13,7 +13,6 @@ import ViewCount from "@/components/ViewCount";
 import BookmarkIcon from "../Bookmark";
 import ReplyToggler from "../reply/ReplyToggler";
 import { useState } from "react";
-import {COMPILER_NAMES} from "next/dist/shared/lib/constants";
 
 const Comment = (comment: TComment) => {
 
