@@ -16,7 +16,7 @@ const DiscussionTitle = ({title, id, disabled}: DiscussionTitleProps) => {
   } else {
     return (
       <Link href={`/discussion/${id}`} className={styles.title}>
-        <h2 className={styles.titleLink}>{title}</h2>
+        <h2>{title}</h2>
       </Link>
     )
   }
