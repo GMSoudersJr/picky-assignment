@@ -22,6 +22,7 @@ const Content = ({content, id, disabled}: ContentProps) => {
     )
   } else {
     if (content.length > 140) contentToDisplay = content.slice(0, 100) + '...'
+
     return (
       <Link href={`/discussion/${id}`} className={styles.content}>
         <p

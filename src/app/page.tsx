@@ -10,7 +10,7 @@ export default function Home() {
       <h2>
         Navigate to <Link href='/discussion' > discussion </Link> to get started!
       </h2>
-      <div className={styles.center}>
+      <div>
         <Image
           src="/images/icon-picky@3x.png"
           alt="Next.js Logo"

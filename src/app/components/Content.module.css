@@ -3,3 +3,7 @@
   grid-area: content;
 }
 
+.contentLink {
+  filter: brightness(80%);
+}
+
