@@ -1,33 +1,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
   padding: 6rem;
   min-height: 100vh;
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
-
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-}
-
-@media (prefers-color-scheme: dark) {
-  .horizonatlRule {
-    filter: invert(1);
-  }
-
 }
